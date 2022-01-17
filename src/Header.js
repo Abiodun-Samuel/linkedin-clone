@@ -1,21 +1,25 @@
+import HeaderOption from "./HeaderOption";
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
+import HomeIcon from "@mui/icons-material/Home";
+import GroupIcon from "@mui/icons-material/Group";
+import linkedin from "./images/linkedin.svg";
 
 function Header() {
   return (
     <div className="header">
       <div className="header_left">
-        <img
-          src="https://cdn-icons.flaticon.com/png/512/3536/premium/3536505.png?token=exp=1640711804~hmac=67d627608a9a2533558677e0a0f17b4d"
-          alt="Linkedin Logo"
-          title="Linkedin Logo"
-        />
+        <img src={linkedin} alt="Linkedin Logo" title="Linkedin Logo" />
         <div className="header_search">
           <SearchIcon />
           <input type="text" name="" id="" />
         </div>
       </div>
-      <div className="header_right"></div>
+      <div className="header_right">
+        <HeaderOption Icon={HomeIcon} title="Home" />
+        <HeaderOption Icon={GroupIcon} title="Network" />
+        <HeaderOption avatar={linkedin} title="Samuel" />
+      </div>
     </div>
   );
 }
